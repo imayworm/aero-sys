@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Aeropartes Brazil</title>
+    <link rel="stylesheet" type="text/css" href="_css/estilo.css"/>
+    <link rel="stylesheet" type="text/css" href="_css/estilo-index.css"/>
+</head>
+<body>
+
+    <div id="menu-geral">
+        <header id="cabecalho">
+            <img id="icone" src="_interface/aero-ico.png" alt="aeropartes-logo" usemap="#button-home">
+            <map name="button-home">
+                <area shape="rect" coords="0,129,127,1" alt="logo-aeropartes" href="index.html">
+            </map>
+
+            <!--
+            usuarios
+            master > desenvolvedor
+            vendas > acesso à pn, foto, editar sem ir pra pendencia, preco, cotacao.
+            estoque > acesso à pn, foto, editar sem ir pra pendencia, preco, cotacao, entrada em lote,
+            sair -->
+            <nav id="menu">
+                <ul>
+                    <li><a href="usuarios-list.html" target="_self">USUÁRIOS</a></li>
+                    <li><a href="login.html" target="_self">SAIR</a></li>
+                </ul>
+            </nav>
+        </header>
+    </div>
+
+    <div id="interface">
+        <div id="produto">
+
+            <iframe id="produto-iframe" src="produtos-list.html">
+
+            </iframe>
+        </div>
+        <aside id="aside-index">
+            <div id="local-trace">
+                <iframe src="produtos-list.html">local/trace</iframe>
+
+            </div>
+            <div id="pendencia">
+                <iframe></iframe>
+
+            </div>
+            <div id="cotacao">
+                <iframe>cotação</iframe>
+            </div>
+        </aside>
+
+    </div>
+    <!--<footer id="rodape">
+        <p>Copyright &copy; 2022 - by Izabela Mayworm<br/>
+            <a href="https://github.com/imayworm" target="_blank">GitHub</a> |
+            <a href="" target="_blank"> Twitter</a></p>
+    </footer>-->
+</body>
+</html>

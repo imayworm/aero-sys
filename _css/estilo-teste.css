@@ -1,0 +1,26 @@
+@charset "utf-8";
+body {
+    font-family: Arial, sans-serif;
+    background-image: url("../_imagens/aviao-hangar-g.jpg");
+    background-size: cover;
+}
+
+div#interface {
+    width: 1300px;
+    height: 540px;
+    background-color: #Ffffff;
+    margin: 0px auto 0 auto;
+    padding: 10px;
+    border-radius: 5px;
+}
+a {
+    color: #606060;
+    text-decoration: none;
+}
+a:hover {
+    color: #ffffff;
+    text-decoration: none;
+}
+nav#menu {
+
+}

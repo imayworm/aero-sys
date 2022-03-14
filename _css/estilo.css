@@ -1,0 +1,62 @@
+@charset "utf-8";
+body {
+    font-family: Arial, sans-serif;
+    background-image: url("../_imagens/aviao-hangar-g.jpg");
+    background-size: cover;
+}
+
+div#interface {
+    width: 1300px;
+    height: 540px;
+    background-color: #Ffffff;
+    margin: 0px auto 0 auto;
+    padding: 10px;
+    border-radius: 5px;
+}
+a {
+    color: #606060;
+    text-decoration: none;
+}
+a:hover {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+/*Formatação menu*/
+#icone {
+    display: block;
+    margin-left: 8px;
+    margin-bottom: 5px;
+}
+
+nav#menu {
+    display: block;
+}
+nav#menu ul {
+    list-style: none;
+    text-transform: uppercase;
+    position: absolute;
+    top: 4px;
+    left: 900px;
+}
+nav#menu li {
+    display: inline-block;
+    background-color: #F2D5D5;
+    padding: 10px;
+    margin: 2px;
+    transition: background-color 1s;
+}
+
+
+
+/*Rodapé*/
+footer#rodape {
+    clear: both; /* elimina a flutuação colocando o rodape no final*/
+    margin: 10px;
+}
+footer#rodape p {
+    text-align: center;
+    color: #ffffff;
+}
+
+

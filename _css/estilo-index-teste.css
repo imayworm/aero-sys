@@ -1,0 +1,132 @@
+@charset "utf-8";
+body, ul, li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-size: 1.2rem;
+    font-family: Arial sans-serif;
+
+}
+/*esconde os scrolls*/
+html,
+body {
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+}
+
+.menu {
+    background-image: linear-gradient(45deg,#D9A545, #D9961A, #8C5C03, #402A01 );
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.menu-interno {
+    display: flex;
+
+}
+.menu-interno li {
+    display: block;
+    margin-left: 10px;
+}
+.menu-interno li a {
+    display: block;
+    padding: 5px;
+}
+
+
+.interface > div { /*box produto*/
+    flex: 1 1 200px;
+    margin: 5px 0 5px 5px;
+    height: 85vh;
+}
+.interface { /*box de produto + sidebar*/
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    max-width: 500vh;
+    height: 85vh;
+    padding: 5px 10px;
+    margin: 0 auto;
+    grid-column-gap: 10px;
+}
+#produto-box {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 4;
+    background-color: #085588;
+
+}
+
+.sidebar { /* barra com prod, pendencia e cotacao*/
+    grid-column-start: 4;
+    grid-column-end: 4;
+    height: 85vh;
+    max-width: 320px;
+    width: 100%;
+    margin: 0 auto;
+}
+/*local, pendencia, cotacao*/
+.interface > div:nth-child(n + 2) {
+    background-color: #118C4B;
+    align-items: center;
+
+}
+
+#prod-bar {
+    background-image: linear-gradient(45deg,#D9A545, #D9961A, #8C5C03, #402A01 );
+    display: inline-block;
+    width: 98%;
+    justify-content: space-around;
+    text-align: center;
+    padding: 10px;
+
+
+}
+#prod-bar a {
+    text-decoration: none;
+    color: black;
+    padding-inline: 3px;
+}
+#cBuscar-prod1 {
+    display: inline-block;
+    margin: 2px;
+}
+
+
+
+
+
+
+
+
+
+
+
+/*barra pesquisa*/
+/*
+div#prod-bar {
+    display: block;
+    background-image: radial-gradient(ellipse, yellow, darkgreen);
+    padding: 10px;
+    border-radius: 5px;
+}
+#but-menu {
+    display: inline-block;
+    margin-left: 250px;
+}
+#cBuscar-prod1 {
+    margin-left: 50px;
+
+}*/
+
+
