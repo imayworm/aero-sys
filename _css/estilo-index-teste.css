@@ -30,17 +30,9 @@ a {
     color: white;
 }
 
-.menu-interno {
-    display: flex;
-
-}
 .menu-interno li {
-    display: block;
-    margin-left: 10px;
-}
-.menu-interno li a {
-    display: block;
-    padding: 5px;
+    display: inline-block;
+    margin: 10px;
 }
 
 
