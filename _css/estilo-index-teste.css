@@ -3,7 +3,7 @@ body, ul, li {
     margin: 0;
     padding: 0;
     list-style: none;
-    font-size: 1.2rem;
+    font-size: 20px;
     font-family: Arial sans-serif;
 
 }
@@ -15,7 +15,7 @@ body {
     height: 100%;
 }
 
-.menu {
+.menu { /*menu top*/
     background-image: linear-gradient(45deg,#D9A545, #D9961A, #8C5C03, #402A01 );
     display: flex;
     flex-wrap: wrap;
@@ -26,10 +26,16 @@ body {
 }
 
 a {
+
     text-decoration: none;
     color: white;
 }
 
+.menu > a {
+    font-size: 1rem;
+
+
+}
 .menu-interno li {
     display: inline-block;
     margin: 10px;
@@ -44,9 +50,9 @@ a {
 .interface { /*box de produto + sidebar*/
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    max-width: 500vh;
+    max-width: 500vw;
     height: 85vh;
-    padding: 5px 10px;
+    padding: 5px 10px 0 5px;
     margin: 0 auto;
     grid-column-gap: 10px;
 }
@@ -63,9 +69,10 @@ a {
     grid-column-start: 4;
     grid-column-end: 4;
     height: 85vh;
-    max-width: 320px;
+    max-width: 400vw;
     width: 100%;
     margin: 0 auto;
+
 }
 /*local, pendencia, cotacao*/
 .interface > div:nth-child(n + 2) {
@@ -76,11 +83,14 @@ a {
 
 #prod-bar {
     background-image: linear-gradient(45deg,#D9A545, #D9961A, #8C5C03, #402A01 );
-    display: inline-block;
-    width: 98%;
-    justify-content: space-around;
+    display: flex;
+    width: 100%;
+    max-width: 98%;
+
+    justify-content: space-evenly;
     text-align: center;
     padding: 10px;
+    margin: 0px;
 
 
 }
@@ -88,37 +98,32 @@ a {
     text-decoration: none;
     color: black;
     padding-inline: 3px;
+
 }
+
+
+button {
+    box-shadow: 1px 1px 5px black;
+
+}
+input {
+    box-shadow: 2px 2px 5px black;
+}
+
 #cBuscar-prod1 {
-    display: inline-block;
-    margin: 2px;
-}
-
-
-
-
-
-
-
-
-
-
-
-/*barra pesquisa*/
-/*
-div#prod-bar {
-    display: block;
-    background-image: radial-gradient(ellipse, yellow, darkgreen);
-    padding: 10px;
+    font: 1.1em bold;
+    border: transparent;
     border-radius: 5px;
 }
-#but-menu {
-    display: inline-block;
-    margin-left: 250px;
+/* tema escuro
+@media (prefers-color-scheme: dark) {
+    div {
+        background: black;
+        color: white;
+    }
+     div {
+          background: black;
+          color: white;
+        }
 }
-#cBuscar-prod1 {
-    margin-left: 50px;
-
-}*/
-
-
+ */
