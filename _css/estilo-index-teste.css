@@ -7,9 +7,8 @@ body, ul, li {
     font-family: Arial sans-serif;
 
 }
-/*esconde os scrolls*/
-html,
-body {
+/*esconde os scrolls overflow: hidden;*/
+html, body {
     overflow: hidden;
     width: 100%;
     height: 100%;
