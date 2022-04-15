@@ -2,34 +2,57 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <title>Aeropartes Brazil</title>
+    <title>Aeropartes Brazil - User List</title>
     <link rel="stylesheet" type="text/css" href="_css/estilo.css"/>
-    <link rel="stylesheet" type="text/css" href="_css/produtos.css"/>
+
 </head>
 <body>
-<div id="menu-geral">
-    <header id="cabecalho">
-        <img id="icone" src="_interface/aero-ico.png" alt="aeropartes-logo">
+<header class="menu">
+    <img class="icone" src="_interface/logo.png" alt="aeropartes-logo" usemap="#button-home">
+    <map name="button-home">
+        <area shape="rect" coords="0,129,127,1" alt="logo-aeropartes" href="index.html">
+    </map>
 
-        <nav id="menu">
-            <ul>
-                <li><a href="usuarios-list.html" target="_self">USUÁRIOS</a></li>
-                <li><a href="login.html" target="_self">SAIR</a></li>
-            </ul>
-        </nav>
-    </header>
-</div>
-<div id="interface">
+    <!--
+    usuarios
+    master > desenvolvedor
+    vendas > acesso à pn, foto, editar sem ir pra pendencia, preco, cotacao.
+    estoque > acesso à pn, foto, editar sem ir pra pendencia, preco, cotacao, entrada em lote,
+    sair -->
+    <nav>
+        <ul class="menu-interno">
+            <li><a href="#" target="_self">DARK</a></li>
+            <li><a href="usuarios-list.html" target="_self">USUÁRIOS</a></li>
+            <li><a href="login.html" target="_self">SAIR</a></li>
+        </ul>
+    </nav>
+</header>
+
+
+<section class="interface">
+
+    <div id="produto-box">
+        <header class="prod-bar">
+            <nav class="menu-produto">
+                <p>Usuários</p>
+                <button><a href="index.html" target="_self">VOLTAR</a></button>
+            </nav>
+
+        </header>
+
+    </div>
 
 
 
 
-
-</div>
-<footer id="rodape">
+</section>
+<!--<footer id="rodape">
     <p>Copyright &copy; 2022 - by Izabela Mayworm<br/>
         <a href="https://github.com/imayworm" target="_blank">GitHub</a> |
-        <a href="" target="_blank"> Twitter</a></p></footer>
+        <a href="" target="_blank"> Twitter</a></p>
+</footer>-->
+
 
 </body>
+
 </html>

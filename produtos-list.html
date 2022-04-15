@@ -1,1 +1,67 @@
-tem que ter a tabela com os produtos
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Aeropartes Brazil - User List</title>
+    <link rel="stylesheet" type="text/css" href="_css/estilo.css"/>
+    <link rel="stylesheet" type="text/css" href="_css/produtos.css"/>
+</head>
+<body>
+<header class="menu">
+    <img class="icone" src="_interface/logo.png" alt="aeropartes-logo" usemap="#button-home">
+    <map name="button-home">
+        <area shape="rect" coords="0,129,127,1" alt="logo-aeropartes" href="index.html">
+    </map>
+
+    <!--
+    usuarios
+    master > desenvolvedor
+    vendas > acesso à pn, foto, editar sem ir pra pendencia, preco, cotacao.
+    estoque > acesso à pn, foto, editar sem ir pra pendencia, preco, cotacao, entrada em lote,
+    sair -->
+    <nav>
+        <ul class="menu-interno">
+            <li><a href="#" target="_self">DARK</a></li>
+            <li><a href="usuarios-list.html" target="_self">USUÁRIOS</a></li>
+            <li><a href="login.html" target="_self">SAIR</a></li>
+        </ul>
+    </nav>
+</header>
+
+
+<section class="interface">
+
+    <div id="produto-box">
+        <header class="prod-bar-prod-list">
+            <nav class="menu-produto">
+                <select id="lista-busca">
+                    <option value="PRODUTO" selected>PRODUTO</option>
+                    <option value="LOCAL">LOCAL</option>
+                    <option value="TRACE">TRACE</option>
+
+                </select>
+                <input type="search" name="tBuscar-prod" ID="cBuscar-prod" size="50" maxlength="40" max="40"
+                       autofocus autocapitalize="characters" placeholder="Digite o PN">
+                <button type="submit" class="button" id="but-submit"> BUSCAR</button>
+                <button class="button-prod-list"><a href="add-prod.html" target="_self">+ Adicionar Produto</a></button>
+                <button class="button-prod-list"><a href="produtos-list.html" target="_self" >MAX</a> </button>
+            </nav>
+
+        </header>
+
+    </div>
+
+
+
+
+</section>
+<!--<footer id="rodape">
+    <p>Copyright &copy; 2022 - by Izabela Mayworm<br/>
+        <a href="https://github.com/imayworm" target="_blank">GitHub</a> |
+        <a href="" target="_blank"> Twitter</a></p>
+</footer>-->
+
+
+</body>
+
+</html>

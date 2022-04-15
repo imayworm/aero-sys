@@ -1,5 +1,97 @@
 @charset "utf-8";
-form {
+body, ul, li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-size: 20px;
+    font-family: Arial sans-serif;
+}
+/*esconde os scrolls*/
+html,
+body {
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    background-image: url("../_imagens/aviao-hangar-g.jpg");
+    background-size: cover;
+}
+section {
+    background-color: #CCCCCC;
+    width: 800px;
+    height: 800px;
+    margin-left: auto; /*usado com o margin right, centraliza o elemento */
+    margin-right: auto;
+    padding: 5px;
+    margin-top: 10vh; /*viewport height- proporcional a altura da tela*/
+    border-radius: 10px;
+    text-align: center;
+}
+fieldset{
+    columns: 2;
+    text-align: justify;
+}
+input
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*form {
     width: 1000px;
     margin: auto;
     padding: 1em;
@@ -27,7 +119,7 @@ input:hover, textarea:hover {
     background-color: #dddddd;
 }
 
-}
+
 legend {
     color: #888888;
     font-weight: bold;
@@ -39,24 +131,24 @@ legend {
     width: 400px;
     float: left;
 
-    /*border: none; tirar borda no final*/
+    border: none; tirar borda no final
 }
 
 #pn-cotacao {
     display: block;
     width: 500px;
     margin: 7px 10px 10px;
-    /*border: none;*/
+    border: none;
 }
 #rfq-button {
     display: inline-block;
     width: 80px;
     padding: 10px;
     margin: 0px 20px 20px 20px;
-    /*border: none;*/
+    border: none;
 }
 #cancelar-button {
     display: inline-block;
     margin-left: 945px;
     margin-top: 5px;
-}
+}*/

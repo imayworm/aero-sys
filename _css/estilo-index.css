@@ -1,46 +1,158 @@
 @charset "utf-8";
+body, ul, li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-size: 20px;
+    font-family: Arial sans-serif;
 
-div#interface {
-    box-sizing: border-box;
+
+}
+/*esconde os scrolls*/
+html,
+body {
+    overflow: hidden;
     width: 100%;
-    margin-right: 0;
+    height: 100%;
+    background-image: url("../_imagens/aviao-hangar-g.jpg");
+    background-size: cover;
 }
 
-#produto {
+.menu { /*menu top*/
+    background-image: linear-gradient(45deg,#D9A545, #D9961A, #8C5C03, #402A01 );
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+
+}
+
+a {
+
+    text-decoration: none;
+    color: white;
+}
+
+.menu > a {
+    font-size: 1rem;
+
+
+}
+.menu-interno li {
+    display: inline-block;
+    margin: 10px;
+}
+
+
+.interface > div { /*box produto*/
+    flex: 1 1 200px;
+    margin: 5px 0 5px 5px;
+    height: 85vh;
+    border-radius: 5px;
+
+}
+.interface { /*box de produto + sidebar*/
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    max-width: 500vw;
+    height: 85vh;
+    padding: 5px 10px 0 5px;
+    margin: 0 auto;
+    grid-column-gap: 5px;
+}
+#produto-box {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 4;
+    background-color: #CCCCCC;
+
+}
+
+.sidebar { /* barra com pendencia e cotacao*/
+    background-image: linear-gradient(45deg,#D9A545, #D9961A, #8C5C03, #402A01 );
     display: block;
-    width: 75%;
-    height: 98%;
-
+    border-radius: 2px;
+    box-shadow: 1px 1px 5px black;
 
 }
 
-#local-trace {
+.sidebar  p, button {
+    display: inline-block;
+    margin: 10px 40px;
+
+}
+
+/*local, pendencia, cotacao*/
+.interface > div:nth-child(n + 2) {
+    display: list-item;
+    background-color: #CCCCCC;
+    align-items: center;
+    max-width: 400vw;
+    height: 530px;
+    border: 1px black;
+
+}
+
+
+.prod-bar { /*barra de pesquisa*/
+    background-image: linear-gradient(45deg,#D9A545, #D9961A, #8C5C03, #402A01 );
     display: block;
-    margin-left: 0;
-    margin-top: -345px;
-    margin-bottom: 15px;
+    height: 45px;
+
+    border-radius: 2px;
+    box-shadow: 1px 1px 5px black;
+    justify-content: space-evenly;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+
 
 }
-#pendencia {
-    display: block;
-    margin-left: 0;
-    margin-bottom: 15px;
+.prod-bar a {
+    text-decoration: none;
+    color: black;
+    padding-inline: 3px;
 
 }
-#cotacao {
-    display: block;
-    margin-left: 0;
-    margin-top: 15px;
-    margin-bottom: -10px;
-}
 
-aside#aside-index {
-    display: block;
-    float: right;
-    width: 24%;
-    height: 75%;
-    margin-top: -165px;
-    margin-left: auto; /*usado com o margin right, centraliza o elemento */
-    margin-right: 0;
+
+button {
+    box-shadow: 1px 1px 5px black;
+    margin: 10px ;
 
 }
+#but-submit{
+
+}
+
+input {
+    height: 30px;
+    border-radius: 3px;
+    box-shadow: 2px 2px 5px black;
+    margin: 0;
+
+}
+#lista-busca {
+    height: 30px;
+    text-align: center;
+}
+
+footer#rodape p, a {
+    text-align: center;
+    color: #CCCCCC;
+    font-family: Arial sans-serif;
+}
+/* tema escuro
+@media (prefers-color-scheme: dark) {
+    div {
+        background: black;
+        color: white;
+    }
+     div {
+          background: black;
+          color: white;
+        }
+}
+ */

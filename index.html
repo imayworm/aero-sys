@@ -2,60 +2,89 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=10, minimum-scale=1.0">
     <title>Aeropartes Brazil</title>
-    <link rel="stylesheet" type="text/css" href="_css/estilo.css"/>
+    <link rel="stylesheet" type="text/css" href="_css/.css"/>
     <link rel="stylesheet" type="text/css" href="_css/estilo-index.css"/>
 </head>
 <body>
+    <header class="menu">
+        <img class="icone" src="_interface/logo.png" alt="aeropartes-logo" usemap="#button-home">
+        <map name="button-home">
+            <area shape="rect" coords="0,129,127,1" alt="logo-aeropartes" href="index.html">
+        </map>
 
-    <div id="menu-geral">
-        <header id="cabecalho">
-            <img id="icone" src="_interface/aero-ico.png" alt="aeropartes-logo" usemap="#button-home">
-            <map name="button-home">
-                <area shape="rect" coords="0,129,127,1" alt="logo-aeropartes" href="index.html">
-            </map>
+        <!--
+        usuarios
+        master > desenvolvedor
+        vendas > acesso à pn, foto, editar sem ir pra pendencia, preco, cotacao.
+        estoque > acesso à pn, foto, editar sem ir pra pendencia, preco, cotacao, entrada em lote,
+        sair -->
+        <nav>
+            <ul class="menu-interno">
+                <li><a href="#" target="_self">DARK</a></li>
+                <li><a href="usuarios-list.html" target="_self">USUÁRIOS</a></li>
+                <li><a href="login.html" target="_self">SAIR</a></li>
+            </ul>
+        </nav>
+    </header>
 
-            <!--
-            usuarios
-            master > desenvolvedor
-            vendas > acesso à pn, foto, editar sem ir pra pendencia, preco, cotacao.
-            estoque > acesso à pn, foto, editar sem ir pra pendencia, preco, cotacao, entrada em lote,
-            sair -->
-            <nav id="menu">
-                <ul>
-                    <li><a href="usuarios-list.html" target="_self">USUÁRIOS</a></li>
-                    <li><a href="login.html" target="_self">SAIR</a></li>
-                </ul>
-            </nav>
-        </header>
-    </div>
 
-    <div id="interface">
-        <div id="produto">
+    <section class="interface">
 
-            <iframe id="produto-iframe" src="produtos-list.html">
+        <div id="produto-box">
+            <header class="prod-bar">
+                <nav class="menu-produto">
+                    <select id="lista-busca">
+                        <option value="PRODUTO" selected>PRODUTO</option>
+                        <option value="LOCAL">LOCAL</option>
+                        <option value="TRACE">TRACE</option>
 
-            </iframe>
+                    </select>
+                    <input type="search" name="tBuscar-prod" ID="cBuscar-prod" size="50" maxlength="40" max="40"
+                           autofocus autocapitalize="characters" placeholder="Digite o PN">
+                    <button type="submit" class="button" id="but-submit"> BUSCAR</button>
+                    <button class="button"><a href="add-prod.html" target="_self">+ Adicionar Produto</a></button>
+                    <button class="button"><a href="produtos-list.html" target="_self" >MAX</a> </button>
+                </nav>
+
+            </header>
+            <!--<div class="break"></div>  break to a new row -->
+
         </div>
-        <aside id="aside-index">
-            <div id="local-trace">
-                <iframe src="produtos-list.html">local/trace</iframe>
+        <!-- <div class="sidebar"> -->
 
-            </div>
-            <div id="pendencia">
-                <iframe></iframe>
+        <div class="pendencia-box">
+            <header class="sidebar">
+                <nav class="menu-produto">
 
-            </div>
-            <div id="cotacao">
-                <iframe>cotação</iframe>
-            </div>
-        </aside>
+                    <p>PENDENCIA</p>
+                    <button class="button"><a href="pendencia.html" target="_self" >MAX</a> </button>
+                </nav>
 
-    </div>
+            </header>
+
+
+        </div>
+
+        <div class="cotacao-box">
+            <header class="sidebar">
+                <nav class="menu-produto">
+                    <p>COTACAO</p>
+                    <button class="button"><a href="cotacao-list.html" target="_self" >MAX</a> </button>
+                </nav>
+
+            </header>
+
+        </div>
+
+    </section>
     <!--<footer id="rodape">
         <p>Copyright &copy; 2022 - by Izabela Mayworm<br/>
             <a href="https://github.com/imayworm" target="_blank">GitHub</a> |
             <a href="" target="_blank"> Twitter</a></p>
     </footer>-->
+
+
 </body>
 </html>

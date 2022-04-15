@@ -2,24 +2,34 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=10, minimum-scale=1.0">
     <title>Aeropartes Brazil</title>
     <link rel="stylesheet" type="text/css" href="_css/estilo.css"/>
     <link rel="stylesheet" type="text/css" href="_css/cotacao.css"/>
 </head>
 <body>
-<div id="menu-geral">
-    <header id="cabecalho">
-        <img id="icone" src="_interface/aero-ico.png" alt="aeropartes-logo">
+<header class="menu">
+    <img class="icone" src="_interface/logo.png" alt="aeropartes-logo" usemap="#button-home">
+    <map name="button-home">
+        <area shape="rect" coords="0,129,127,1" alt="logo-aeropartes" href="index.html">
+    </map>
 
-        <nav id="menu">
-            <ul>
-                <li><a href="usuarios-list.html" target="_self">USUÁRIOS</a></li>
-                <li><a href="login.html" target="_self">SAIR</a></li>
-            </ul>
-        </nav>
-    </header>
-</div>
-<div id="interface">
+    <!--
+    usuarios
+    master > desenvolvedor
+    vendas > acesso à pn, foto, editar sem ir pra pendencia, preco, cotacao.
+    estoque > acesso à pn, foto, editar sem ir pra pendencia, preco, cotacao, entrada em lote,
+    sair -->
+    <nav>
+        <ul class="menu-interno">
+            <li><a href="#" target="_self">DARK</a></li>
+            <li><a href="usuarios-list.html" target="_self">USUÁRIOS</a></li>
+            <li><a href="login.html" target="_self">SAIR</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section id="interface">
 
     <button id="cancelar-button" >Cancelar</button> <!--colocar um botao para voltar á pag do pn -->
     <form method="post" id="fcotacao" action="produtos-list.html">
@@ -27,29 +37,40 @@
         <fieldset id="client-info">
 
             <p><label for="cCompany">Company:</label> <input type="text" name="tCompany" id="cCompany" size="34" maxlength="30" placeholder="Company" /></p>
-            <p><label for="cName">Name:</label> <input type="text" name="tName" id="cName" size="34" maxlength="30" placeholder="Name"/></p>
-            <p><label for="cEmail">Email:</label> <input type="email" name="tEmail" id="cEmail" size="34" maxlength="30" placeholder="Email"/></p>
-            <p><label for="cPhone">Phone:</label> <input type="text" name="tPhone" id="cPhone" size="34" maxlength="30" placeholder="Phone"/></p>
-            <p><label for="cRemarks">Remarks: </label> <textarea name="tRemarks" id="cRemarks" cols="25" rows="2" placeholder="Type here any remarks"></textarea></p>
-        </fieldset>
-        <fieldset id="pn-cotacao">
-            <p>Part Number</p>
-            <p>Alternate PN</p>
-            <p>Description</p>
-            <p>Condition</p>
-            <p>Unit</p>
+            <p><label for="cName">Name:</label> <input type="text" name="tName" id="cName" size="39" maxlength="30" placeholder="Name"/></p>
+            <p><label for="cEmail">Email:</label> <input type="email" name="tEmail" id="cEmail" size="39" maxlength="30" placeholder="Email"/></p>
+            <p><label for="cPhone">Phone:</label> <input type="tel" name="tPhone" id="cPhone" size="38" maxlength="30" placeholder="Phone"/></p>
+            <p><label for="cRemarks">Remarks: </label> <textarea name="tRemarks" id="cRemarks" cols="30" rows="2" placeholder="Type here any remarks"></textarea></p>
+            <p><label for="cPartNumber">Part Number:</label><input type="text" name="tPartNumber" id="cPartNumber" size="34" maxlength="30" placeholder="Part Number"/></p>
+            <p><label for="cAlternatePn">Alternate PN:</label><input type="text" name="tAlternatePn" id="cAlternatePn" size="34" maxlength="30" placeholder="Alternate Pn"/></p>
+            <p><label for="cDescription">Description:</label><input type="text" name="tDescription" id="cDescription" size="36" maxlength="30" placeholder="Description"/></p>
+            <p><label for="cCondition">Condition</label><select name="tCondition" id="cCondition">
+                <option selected value="ne">NE - FABRIC NEW</option>
+                <option value="ns">NS - NEW SURPLUS</option>
+                <option value="oh">OH - OVERHAULED</option>
+                <option value="sv">SV - SERVICEABLE</option>
+                <option value="ar">AR - AS REMOVED</option>
+            </select></p>
+            <p><label for="cUnit">Unit</label><select name="tUnit" id="cUnit">
+                <option selected value="ea">EA</option>
+                <option value="ft">FT</option>
+                <option value="lb">LB</option>
+                <option value="kt">KT</option>
+                <option value="rl">RL</option>
+                <option value="pk">PK</option>
+            </select></p>
 
         </fieldset>
         <fieldset> <button type="submit">SEND RFQ</button></fieldset>
     </form>
 
 
-    <footer id="rodape">
-        <p>Copyright &copy; 2022 - by Izabela Mayworm<br/>
-            <a href="https://github.com/imayworm" target="_blank">GitHub</a> |
-            <a href="" target="_blank"> Twitter</a></p></footer>
-</div>
 
+</section>
 
+<footer id="rodape">
+    <p>Copyright &copy; 2022 - by Izabela Mayworm<br/>
+        <a href="https://github.com/imayworm" target="_blank">GitHub</a> |
+        <a href="" target="_blank"> Twitter</a></p></footer>
 </body>
 </html>
