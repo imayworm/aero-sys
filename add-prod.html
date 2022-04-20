@@ -2,44 +2,43 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=10, minimum-scale=1.0">
     <title>Aeropartes Brazil</title>
-    <link rel="stylesheet" type="text/css" href="_css/estilo.css"/>
+    <link rel="stylesheet" type="text/css" href="_css/estilo-geral.css"/>
     <link rel="stylesheet" type="text/css" href="_css/produtos-2.css"/>
 </head>
 <body>
-<div id="menu-geral">
-    <header id="cabecalho">
-        <img id="icone" src="_interface/aero-ico.png" alt="aeropartes-logo" usemap="#button-home">
-        <map name="button-home">
-            <area shape="rect" coords="0,129,127,1" alt="logo-aeropartes" href="index.html">
-        </map>
+    <header class="menu">
+    <img class="icone" src="_interface/logo.png" alt="aeropartes-logo" usemap="#button-home">
+    <map name="button-home">
+        <area shape="rect" coords="0,129,127,1" alt="logo-aeropartes" href="index.html">
+    </map>
 
-        <!--
-        usuarios
-        master > desenvolvedor
-        vendas > acesso à pn, foto, editar sem ir pra pendencia, preco, cotacao.
-        estoque > acesso à pn, foto, editar sem ir pra pendencia, preco, cotacao, entrada em lote,
-        sair -->
-        <nav id="menu">
-            <ul>
-                <li><a href="usuarios-list.html" target="_self">USUÁRIOS</a></li>
-                <li><a href="login.html" target="_self">SAIR</a></li>
-            </ul>
-        </nav>
+    <!--
+    usuarios
+    master > desenvolvedor
+    vendas > acesso à pn, foto, editar sem ir pra pendencia, preco, cotacao.
+    estoque > acesso à pn, foto, editar sem ir pra pendencia, preco, cotacao, entrada em lote,
+    sair -->
+    <nav>
+        <ul class="menu-interno">
+            <li><a href="#" target="_self">DARK</a></li>
+            <li><a href="usuarios-list.html" target="_self">USUÁRIOS</a></li>
+            <li><a href="login.html" target="_self">SAIR</a></li>
+        </ul>
+    </nav>
     </header>
-</div>
-<div id="interface">
 
+<section id="interface">
 
     <div>
-        <form method="get" action="produto-list.php">
-            <div id="tit-esq">
-                <div class="lado01"><label for="cPn">PARTNUMBER: </label><input type="text" name="tPn" id="cPn" maxlength="30" required autofocus ></div>
-                <div class="lado01"><label for="cAlt">ALTERNATIVO: </label><input type="text" name="tAlt" id="cAlt" maxlength="30"></div>
-                <div class="lado01"><label for="cDesc" id="cDesc-label">DESCRIÇÃO:</label> <input type="text" name="tDesc" id="cDesc" maxlength="30" required></div>
-            </div>
-            <div id="tit-dir">
-                <div class="lado02"><label for="cUni">UNIDADE: </label>
+        <form method="get" action="produto-list.php" id="form-prod">
+
+                <label for="cPn">PARTNUMBER: </label><input type="text" name="tPn" id="cPn" class="top-input" max="30" maxlength="100" required autofocus >
+                <label for="cAlt">ALTERNATIVO: </label><input type="text" name="tAlt" id="cAlt" class="top-input" maxlength="30">
+                <label for="cDesc" id="cDesc-label">DESCRIÇÃO:</label> <input type="text" name="tDesc" id="cDesc" class="top-input" maxlength="30" required>
+
+                <label for="cUni">UNIDADE: </label>
                     <select name="tUni" id="cUni">
                         <option selected value="ea">EA</option>
                         <option value="ft">FT</option>
@@ -47,53 +46,47 @@
                         <option value="kt">KT</option>
                         <option value="rl">RL</option>
                         <option value="pk">PK</option>
-                    </select></div>
-                <div class="lado02"><label for="cCond" >CONDIÇÃO:</label>
+                    </select>
+                <label for="cCond" >CONDIÇÃO:</label>
                     <select name="tCon" id="cCond" required>
                         <option value="ne">NE - FABRIC NEW</option>
-                        <option selected value="ns">NS - NEW SURPLUS</option>
+                        <option value="ns">NS - NEW SURPLUS</option>
                         <option value="oh">OH - OVERHAULED</option>
                         <option value="sv">SV - SERVICEABLE</option>
                         <option value="ar">AR - AS REMOVED</option>
-                    </select></div>
-                <div class="lado02"><label for="cLista">LISTA:</label>
+                    </select>
+                <label for="cLista">LISTA:</label>
                     <select name="tLista" id="cLista">
                         <option selected value="y">Y - YES TO ALL</option>
                         <option value="n">N - SUPPLIER ONLY</option>
                     </select>
-                </div>
-            </div>
-            <div id="locais-prod">
-                <table >
-                    <tr>
-                        <td>INVENTARIADO</td>
-                        <td>TRACE</td>
-                        <td>LOCAL</td>
-                        <td>QUANTIDADE</td>
-                        <td>CUSTO</td>
-                        <td>EXPORTAÇÃO</td>
-                        <td>NACIONAL</td>
-                        <td>TAG</td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
 
 
-                </table>
-            </div>
+
 
 
 
             <input type="submit" value="Enviar">
         </form>
+        <table>
+            <tr>
+                <th>INVENTARIADO</th>
+                <th>TRACE</th>
+                <th>LOCAL</th>
+                <th>QUANTIDADE</th>
+                <th>CUSTO</th>
+                <th>EXPORTAÇÃO</th>
+                <th>NACIONAL</th>
+                <th>TAG</th>
+            </tr>
+
+
+
+        </table>
+        <div class="fotos-entrada">
+            <input form="form-prod" type="file">
+
+        </div>
     </div>
 
 
@@ -102,7 +95,7 @@
 
 
 
-</div>
+</section>
 <footer id="rodape">
     <p>Copyright &copy; 2022 - by Izabela Mayworm<br/>
         <a href="https://github.com/imayworm" target="_blank">GitHub</a> |

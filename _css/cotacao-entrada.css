@@ -16,24 +16,64 @@ body {
     background-size: cover;
 }
 section {
-    background-color: #CCCCCC;
-    width: 800px;
-    height: 800px;
+    background-color: white;
+    width: 850px;
+    height: 750px;
     margin-left: auto; /*usado com o margin right, centraliza o elemento */
     margin-right: auto;
-    padding: 5px;
+    padding: 5px 30px;
     margin-top: 10vh; /*viewport height- proporcional a altura da tela*/
     border-radius: 10px;
     text-align: center;
 }
-fieldset{
-    columns: 2;
-    text-align: justify;
+form{
+    flex: 1 1 auto;
+    text-align: left;
+
+    margin: 10px;
 }
-input
 
+label {
+    display: inline-flex;
+    width: 110px;
+    height: 23px;
+    background-color: rgba(0,0,0,0.14) ;
+    padding: 5px;
+    box-sizing: content-box;
+    border-radius: 2px;
+    text-align: center;
+    border: rgba(0,0,0,0.14) solid 1px;
+}
+input {
+    display: inline-flex;
+    box-shadow: none;
+    height: 30px;
+    border-radius: 3px;
 
+    margin: 0;
+}
+button {
+    box-shadow: 1px 1px 5px black;
 
+}
+
+button {
+    color: black;
+    margin: 20px;
+    padding: 5px;
+}
+button a {
+    color: black;
+    margin: 20px;
+}
+footer {
+    text-align: center;
+    color: white;
+    margin-top: 20px;
+}
+footer > p {
+    color: white;
+}
 
 
 
