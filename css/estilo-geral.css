@@ -1,0 +1,52 @@
+@charset "utf-8";
+body, ul, li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-size: 20px;
+    font-family: Arial sans-serif;
+}
+/*esconde os scrolls*/
+html,
+body {
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    background-image: url("../imagens/aviao-hangar-g.jpg");
+    background-size: cover;
+}
+
+.menu { /*menu top*/
+    background-image: linear-gradient(45deg,#D9A545, #D9961A, #8C5C03, #402A01 );
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.menu > a {
+    font-size: 1rem;
+}
+.menu-interno li {
+    display: inline-block;
+    margin: 10px;
+}
+/*
+button {
+    box-shadow: 1px 1px 5px black;
+
+}
+
+input {
+    height: 30px;
+    border-radius: 3px;
+    box-shadow: 2px 2px 5px black;
+    margin: 0;
+
+}
