@@ -34,51 +34,63 @@
     <div>
         <form method="get" action="produto-list.php" id="form-prod">
 
-                <label for="cPn">PARTNUMBER: </label><input type="text" name="tPn" id="cPn" class="top-input" max="30" maxlength="100" required autofocus >
-                <label for="cAlt">ALTERNATIVO: </label><input type="text" name="tAlt" id="cAlt" class="top-input" maxlength="30">
-                <label for="cDesc" id="cDesc-label">DESCRIÇÃO:</label> <input type="text" name="tDesc" id="cDesc" class="top-input" maxlength="30" required>
+            <div class="l1">
+                <label for="cPn">PARTNUMBER </label>
+                <input type="text" name="tPn" id="cPn" class="top-input" max="50" maxlength="100" required autofocus>
+                <label for="cAlt">ALTERNATIVO </label>
+                <input type="text" name="tAlt" id="cAlt" class="top-input" max="50" maxlength="30">
+                <label for="cDesc" id="cDesc-label">DESCRIÇÃO</label>
+                <input type="text" name="tDesc" id="cDesc" class="top-input" max="50" maxlength="30" required>
+            </div>
 
-                <label for="cUni">UNIDADE: </label>
-                    <select name="tUni" id="cUni">
-                        <option selected value="ea">EA</option>
-                        <option value="ft">FT</option>
-                        <option value="lb">LB</option>
-                        <option value="kt">KT</option>
-                        <option value="rl">RL</option>
-                        <option value="pk">PK</option>
-                    </select>
-                <label for="cCond" >CONDIÇÃO:</label>
-                    <select name="tCon" id="cCond" required>
-                        <option value="ne">NE - FABRIC NEW</option>
-                        <option value="ns">NS - NEW SURPLUS</option>
-                        <option value="oh">OH - OVERHAULED</option>
-                        <option value="sv">SV - SERVICEABLE</option>
-                        <option value="ar">AR - AS REMOVED</option>
-                    </select>
-                <label for="cLista">LISTA:</label>
-                    <select name="tLista" id="cLista">
-                        <option selected value="y">Y - YES TO ALL</option>
-                        <option value="n">N - SUPPLIER ONLY</option>
-                    </select>
+            <div class="l2">
+                <label for="cUni">UNIDADE </label>
+                <select name="tUni" id="cUni">
+                    <option selected value="ea">EA</option>
+                    <option value="ft">FT</option>
+                    <option value="lb">LB</option>
+                    <option value="kt">KT</option>
+                    <option value="rl">RL</option>
+                    <option value="pk">PK</option>
+                </select>
+                <label for="cCond">CONDIÇÃO</label>
+                <select name="tCon" id="cCond" required>
+                    <option value="ne">NE - FABRIC NEW</option>
+                    <option value="ns">NS - NEW SURPLUS</option>
+                    <option value="oh">OH - OVERHAULED</option>
+                    <option value="sv">SV - SERVICEABLE</option>
+                    <option value="ar">AR - AS REMOVED</option>
+                </select>
+                <label for="cLista">LISTA</label>
+                <select name="tLista" id="cLista">
+                    <option selected value="y">Y - YES TO ALL</option>
+                    <option value="n">N - SUPPLIER ONLY</option>
+                </select>
+            </div>
 
 
 
 
 
 
-            <input type="submit" value="Enviar">
+
         </form>
+        <div class="div-botao">
+            <button type="submit" form="form-prod">SALVAR</button>
+        </div>
         <table >
-            <tr>
-                <th>INVENTARIADO</th>
-                <th>TRACE</th>
-                <th>LOCAL</th>
-                <th>QUANTIDADE</th>
-                <th>CUSTO</th>
-                <th>EXPORTAÇÃO</th>
-                <th>NACIONAL</th>
-                <th>TAG</th>
-            </tr>
+            <thead>
+                <tr>
+                    <th>INVENTARIADO</th>
+                    <th>TRACE</th>
+                    <th>LOCAL</th>
+                    <th>QUANTIDADE</th>
+                    <th>CUSTO</th>
+                    <th>EXPORTAÇÃO</th>
+                    <th>NACIONAL</th>
+                    <th>TAG</th>
+                </tr>
+            </thead>
 
 
 
@@ -87,8 +99,9 @@
             <input form="form-prod" type="file">
 
         </div>
-    </div>
 
+    </div>
+    <footer id="rodape-div"></footer>
 
 
 
