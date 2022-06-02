@@ -6,15 +6,25 @@ body, ul, li {
     font-size: 20px;
     font-family: Arial sans-serif;
 }
-/*esconde os scrolls*/
+.interface {
+    background-color: #336699;
+    color: #333333;
+}
+
+
 html,
 body {
-    overflow: hidden;
     width: 100%;
     height: 100%;
-    background-image: url("../imagens/aviao-hangar-g.jpg");
+    background: #323232 url("../imagens/aviao-hangar-g.jpg") center center no-repeat fixed;
     background-size: cover;
 }
+
+/* shorthand background
+    color > image > position > repeat > size > attachment
+
+*/
+
 
 .menu { /*menu top*/
     background-image: linear-gradient(45deg,#D9A545, #D9961A, #8C5C03, #402A01 );
@@ -49,6 +59,7 @@ a {
     height: 85vh;
     padding: 10px;
     margin: 0 auto;
+
 
 }
 #produto-box {
