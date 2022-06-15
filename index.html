@@ -10,7 +10,7 @@
 </head>
 <body>
     <header class="menu">
-        <img class="icone" src="interface/logo.png" alt="aeropartes-logo" usemap="#button-home">
+        <img class="icone" src="imagens/aero-150.png" alt="aeropartes-logo" usemap="#button-home">
         <map name="button-home">
             <area shape="rect" coords="0,129,127,1" alt="logo-aeropartes" href="index.html">
         </map>
@@ -23,7 +23,7 @@
         sair -->
         <nav>
             <ul class="menu-interno">
-                <li><button onclick="darkMode()">DARK</button></li>
+                <li><button onclick="darkMode()" id="button-dark">DARK</button></li>
                 <li><a href="usuarios-list.html" target="_self">USUÁRIOS</a></li>
                 <li><a href="login.html" target="_self">SAIR</a></li>
             </ul>
@@ -99,5 +99,21 @@
     </footer>-->
 
     <!--<script src="dark-mode.js"></script>-->
+    <script>
+    function darkMode(){
+        var botao = document.querySelector('button#button-dark')
+        var interface_tela = document.querySelector('div#produto-box')
+        var pendencia = document.querySelector('div.pendencia-box')
+        var cotacao = document.querySelector('div.cotacao-box')
+        interface_tela.style.background = 'black'
+        interface_tela.style.color = 'white'
+        pendencia.style.background = 'black'
+        pendencia.style.color = 'white'
+        cotacao.style.background = 'black'
+        cotacao.style.color = 'white'
+        botao.innerHTML = 'LIGHT'
+
+    }
+    </script>
 </body>
 </html>

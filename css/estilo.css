@@ -7,7 +7,7 @@ body, ul, li {
     font-family: Arial sans-serif;
 }
 .interface {
-    background-color: #336699;
+    
     color: #333333;
 }
 
@@ -27,7 +27,7 @@ body {
 
 
 .menu { /*menu top*/
-    background-image: linear-gradient(45deg,#D9A545, #D9961A, #8C5C03, #402A01 );
+    background-image: linear-gradient(45deg,#dcd9d9, #797676);
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -69,7 +69,7 @@ a {
 
 
 .prod-bar { /*barra da pendencia, cotacao.*/
-    background-image: linear-gradient(45deg,#D9A545, #D9961A, #8C5C03, #402A01 );
+    background-image: linear-gradient(45deg,#dcd9d9, #797676);
     display: block;
     height: 45px;
     border-radius: 2px;

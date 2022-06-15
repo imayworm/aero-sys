@@ -1,6 +1,6 @@
 @charset "utf-8";
 .prod-bar-prod-list { /*barra de pesquisa da lista de produto*/
-    background-image: linear-gradient(45deg,#D9A545, #D9961A, #8C5C03, #402A01 );
+    background-image: linear-gradient(45deg,#dcd9d9, #797676);
     display: block;
     height: 45px;
     border-radius: 2px;

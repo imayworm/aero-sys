@@ -24,13 +24,13 @@
     grid-column-end: 4;
     grid-row-start: 1;
     grid-row-end: 4;
-    background-color: #CCCCCC;
+    background-color: \white;
     height: 88vh;
 
 }
 
 .sidebar { /* barra com pendencia e cotacao*/
-    background-image: linear-gradient(45deg,#D9A545, #D9961A, #8C5C03, #402A01 );
+    background-image: linear-gradient(45deg,#dcd9d9, #797676);
     display: block;
     border-radius: 2px;
     box-shadow: 1px 1px 5px black;
@@ -48,7 +48,7 @@
 /*local, pendencia, cotacao*/
 .interface > div:nth-child(n + 2) {
     display: list-item;
-    background-color: #CCCCCC;
+    background-color: white;
     align-items: center;
     max-width: 50vw;
     height: 43.8vh;
@@ -58,7 +58,7 @@
 
 
 .prod-bar { /*barra de pesquisa*/
-    background-image: linear-gradient(45deg,#D9A545, #D9961A, #8C5C03, #402A01 );
+    background-image: linear-gradient(45deg,#dcd9d9, #797676);
     display: block;
     height: 45px;
 
@@ -86,6 +86,7 @@ button {
 
 
 }
+
 
 
 #but-submit{

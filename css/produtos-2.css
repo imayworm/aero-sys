@@ -1,4 +1,4 @@
-@charset"utf-8";
+@charset "utf-8";
 body, ul, li, form, table{
     margin: 0;
     padding: 0;
@@ -114,7 +114,7 @@ button {
     display: block;
     width: 1310px;
     height: 30px;
-    background-image: linear-gradient(45deg,#D9A545, #D9961A, #8C5C03, #402A01 );
+    background-image: linear-gradient(45deg,#dcd9d9, #797676);
     margin: 360px 0 -250px -30px ;
     padding: 0;
     border-bottom-left-radius: 10px;
