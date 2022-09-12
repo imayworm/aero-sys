@@ -8,18 +8,21 @@
     <link rel="stylesheet" type="text/css" href="css/login.css">
 </head>
 <body>
+<main>
     <div id="login-container">
         <img id="icone" src="interface/aero-ico.png" alt="aeropartes-logo">
         <h1>Login</h1>
-        <form action="">
-            <label for="cLogin">Usuário</label>
-            <input type="text" name="tLogin" id="cLogin" placeholder="Usuário"/>
-            <label for="cPassword">Senha</label>
-            <input type="password" name="tPassword" id="cPassword" placeholder="Senha">
+        <form method="post" action="cadastro.php">
+            <label for="Login">Usuário</label>
+            <input type="text" name="Login" id="Login" placeholder="Usuário"/>
+            <label for="Password">Senha</label>
+            <input type="password" name="Password" id="Password" placeholder="Senha">
             <a href="#" id="forgot-pass">Esqueceu a senha?</a>
             <input type="submit" value="Login">
         </form>
     </div>
+
+</main>
     <footer id="rodape">
         <p>Copyright &copy; 2022 - by Izabela Mayworm<br/>
             <a href="https://github.com/imayworm" target="_blank">GitHub</a> |

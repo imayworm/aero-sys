@@ -62,7 +62,6 @@
             </header>
             <!--<div class="break"></div>  break to a new row -->
                 <table class="listagem">
-
                     <tr>
                         <th>Part Number</th>
                         <th>Alternativo</th>
@@ -73,6 +72,29 @@
                         <th>Edit</th>
                         <th>Foto</th>
                     </tr>
+                    <?php
+                    require_once "includes/busca_bd.php";
+                    ?>
+                    <?php
+                        $busca = $banco->query("select * from produtos");
+                        if(!$busca) {
+                            echo "<tr><td>Infelizmente a busca deu errado</tr>";
+                        } else {
+                            if($busca->num_rows == 0) {
+                                echo "<tr><td>Nenhum registro encontrado";
+                            } else {
+                                while($reg = $busca->fetch_object()){//fetch pega todos os dados e faz caber em outro objeto
+                                    echo "<tr><td>$reg->PARTNUMBER<td>$reg->ALTERNATIVO<td>$reg->DESCRICAO<td>$reg->CONDICAO<td>$reg->LISTA";
+                                }
+                            }
+                        }
+
+
+
+
+
+                    ?>
+                    
                     <tr>
                         <td>exemplo</td>
                         <td>exemplo</td>
@@ -182,5 +204,6 @@
 
     }
     </script>
+
 </body>
 </html>

@@ -11,14 +11,19 @@
 
 }
 body {
+    background-color: black;
+    position: relative;
+}
+main {
     background-image: url("../imagens/aviao-hangar-g.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     overflow: hidden;
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 95vh;
 
 }
+
 textarea:focus, input:focus {
     outline: none;
 
@@ -89,9 +94,10 @@ input[type="submit"]:hover {
     transition: 0.5s;
 }
 footer {
-    margin-top: 20px;
+    margin-top: 05px;
 }
 footer#rodape p, a {
     text-align: center;
     color: #ffffff;
 }
+/*colocar imagem centralizada com media query*/

@@ -1,9 +1,12 @@
 @charset "utf-8";
-
+* {
+    margin: 0;
+    padding: 0;
+}
 
 
 .interface > div { /*box produto*/
-    flex: 1 1 100px;
+    flex: 1 1 ;
     margin: 5px 0 5px 5px;
     height: 85vh;
     border-radius: 5px;
@@ -24,9 +27,9 @@
     grid-column-end: 4;
     grid-row-start: 1;
     grid-row-end: 4;
-    background-color: \white;
+    background-color: white;
     height: 88vh;
-
+    width: 65vw;
 }
 
 .sidebar { /* barra com pendencia e cotacao*/
@@ -45,7 +48,7 @@
 
 }
 
-/*local, pendencia, cotacao*/
+/* pendencia, cotacao*/
 .interface > div:nth-child(n + 2) {
     display: list-item;
     background-color: white;

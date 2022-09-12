@@ -55,6 +55,7 @@ a {
     border-radius: 5px;
 }
 .interface { /*box de produto + sidebar*/
+
     max-width: 500vw;
     height: 85vh;
     padding: 10px;
