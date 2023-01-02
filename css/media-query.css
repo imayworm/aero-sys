@@ -1,0 +1,144 @@
+@charset "utf-8";
+
+/*todas as demais medias*/
+
+/*----------------------------------*/
+
+/*
+-- Pequenas telas (phones, até 600px)
+@media only screen and (max-width: 600px) {...}
+
+-- Pequenos dispositivos (telefones grandes, 600px até 768px )
+@media only screen and (min-width: 600px) {...}
+
+-- Dispositivos médios (landscape tablets, 768px and 992px)
+@media only screen and (min-width: 768px) {...}
+
+-- grandes dispositivos (laptops/desktops, 992px and 1200px)
+@media only screen and (min-width: 992px) {...}
+
+-- Grandes telas  (large laptops and desktops, 1200px and up)
+@media only screen and (min-width: 1200px) {...} */
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+    body {
+        width: 100%;
+    }
+    .prod-bar, .sidebar {
+        text-align: center;
+
+    }
+    input {
+        width: 200px;
+    }
+    button {
+        margin: 10px 20px;
+    }
+    #lista-busca {
+        margin: 10px -5px 10px 0 ;
+    }
+
+
+}
+
+
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+    body {
+        width: 100vw;
+    }
+
+    .prod-bar, .sidebar {
+        text-align: center
+
+    }
+    .interface > input {
+        width: 400px;
+    }
+    button {
+        margin: 10px 20px;
+    }
+    #lista-busca {
+        margin: 10px -5px 10px 0 ;
+    }
+    table {
+        width: 100%;
+    }
+    .pendencia-box {
+
+        visibility: visible;
+    }
+    /*
+    .pendencia-box > table {
+        width: 98%;
+    }
+    .cotacao-box > table {
+        width: 98%;
+    }
+    .pendencia-box {
+        display: inline-flex;
+        width: 50vw;
+        visibility: visible;
+    }
+    .cotacao-box {
+        display: inline-flex;
+        width: 50vw;
+    }*/
+}
+
+@media screen and (min-width: 1201px) {
+    body {
+        width: 100vw;
+    }
+    .interface /*equivale ao section.container*/{
+        height: 400px;
+
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: ;
+    }
+    .sub-int {
+        width: 20%;
+
+
+
+    }
+    .pendencia-box{
+
+    }
+    .cotacao-box{
+
+    }
+
+
+
+    div.cotacao-box {
+        display: block;
+
+        margin: 0 auto;
+
+    }
+
+    .prod-bar, .sidebar {
+        text-align: center;
+
+    }
+    input {
+        width: 200px;
+    }
+    button {
+        margin: 10px 20px;
+    }
+    #lista-busca {
+        margin: 10px -5px 10px 0 ;
+    }
+    div > table {
+        width: 100%;
+    }
+    .sub-int > table {
+        width: 98%;
+    }
+    .interface {
+        background-color: green;
+    }
+}

@@ -5,10 +5,8 @@
     <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=10, minimum-scale=1.0">
     <title>Aeropartes Brazil</title>
     <link rel="stylesheet" type="text/css" href="css/estilo-geral.css" media="all"/>
-    <link rel="stylesheet" type="text/css" href="css/mobile.css" media="all"/>
-    <link rel="stylesheet" type="text/css" href="css/media-query.css" media="all"/>
+    <link rel="stylesheet" type="text/css" href="css/estilo-index.css" media="all"/>
     <link rel="stylesheet" type="text/css" href="css/estilo-tabela.css"/>
-
 
 </head>
 <body>
@@ -37,7 +35,7 @@
 
     <section class="interface">
 
-        <div  class="sub-int" id="produto-box">
+        <div id="produto-box">
             <header class="prod-bar">
                 <nav class="menu-produto">
                     <select id="lista-busca">
@@ -48,8 +46,8 @@
                     </select>
                     <input type="search" name="tBuscar-prod" ID="cBuscar-prod" size="50" maxlength="40" max="40"
                            autofocus autocapitalize="characters" placeholder="Digite o PN">
-                    <button type="submit" class="button" id="but-submit"> IR</button>
-                    <button class="button"><a href="add-prod.html" target="_self">+ </a></button>
+                    <button type="submit" class="button" id="but-submit"> BUSCAR</button>
+                    <button class="button"><a href="add-prod.html" target="_self">+ Adicionar Produto</a></button>
                     <button class="button"><a href="produtos-list.html" target="_self" >MAX</a> </button>
                     
                     <!--<script>
@@ -62,7 +60,7 @@
                 </nav>
 
             </header>
-            <div id="container">
+            <!--<div class="break"></div>  break to a new row -->
                 <table class="listagem">
                     <tr>
                         <th>Part Number</th>
@@ -78,22 +76,25 @@
                     require_once "includes/busca_bd.php";
                     ?>
                     <?php
-                    $busca = $banco->query("select * from produtos");
-                    if (!$busca) {
-                        echo "<tr><td>Infelizmente a busca deu errado</tr>";
-                    } else {
-                        if ($busca->num_rows == 0) {
-                            echo "<tr><td>Nenhum registro encontrado";
+                        $busca = $banco->query("select * from produtos");
+                        if(!$busca) {
+                            echo "<tr><td>Infelizmente a busca deu errado</tr>";
                         } else {
-                            while ($reg = $busca->fetch_object()) {//fetch pega todos os dados e faz caber em outro objeto
-                                echo "<tr><td>$reg->PARTNUMBER<td>$reg->ALTERNATIVO<td>$reg->DESCRICAO<td>$reg->CONDICAO<td>$reg->LISTA";
+                            if($busca->num_rows == 0) {
+                                echo "<tr><td>Nenhum registro encontrado";
+                            } else {
+                                while($reg = $busca->fetch_object()){//fetch pega todos os dados e faz caber em outro objeto
+                                    echo "<tr><td>$reg->PARTNUMBER<td>$reg->ALTERNATIVO<td>$reg->DESCRICAO<td>$reg->CONDICAO<td>$reg->LISTA";
+                                }
                             }
                         }
-                    }
+
+
+
 
 
                     ?>
-
+                    
                     <tr>
                         <td>exemplo</td>
                         <td>exemplo</td>
@@ -125,18 +126,16 @@
                         <td>Y</td>
                     </tr>
                 </table>
-            </div>
 
         </div>
         <!-- <div class="sidebar"> -->
 
-
-        <div class=" sub-int pendencia-box">
+        <div class="pendencia-box">
             <header class="sidebar">
                 <nav class="menu-produto">
 
                     <p>PENDENCIA</p>
-                    <button class="button"><a href="pendencia.html" target="_self">MAX</a></button>
+                    <button class="button"><a href="pendencia.html" target="_self" >MAX</a> </button>
                 </nav>
             </header>
             <table>
@@ -156,15 +155,14 @@
 
         </div>
 
-        <div class="sub-int cotacao-box">
+        <div class="cotacao-box">
             <header class="sidebar">
                 <nav class="menu-produto">
                     <p>COTAÇÃO</p>
-                    <button class="button"><a href="cotacao-list.html" target="_self">MAX</a></button>
+                    <button class="button"><a href="cotacao-list.html" target="_self" >MAX</a> </button>
                 </nav>
 
             </header>
-
 
             <table>
                 <tr>
@@ -180,12 +178,9 @@
 
                 </tr>
             </table>
-
         </div>
 
-
     </section>
-
     <!--<footer id="rodape">
         <p>Copyright &copy; 2022 - by Izabela Mayworm<br/>
             <a href="https://github.com/imayworm" target="_blank">GitHub</a> |

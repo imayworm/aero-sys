@@ -16,6 +16,7 @@ body {
 }
 main {
     background-image: url("../imagens/aviao-hangar-g.jpg");
+    background-attachment: fixed;
     background-size: cover;
     background-repeat: no-repeat;
     overflow: hidden;
