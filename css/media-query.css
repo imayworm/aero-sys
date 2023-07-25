@@ -19,126 +19,115 @@
 
 -- Grandes telas  (large laptops and desktops, 1200px and up)
 @media only screen and (min-width: 1200px) {...} */
+@media screen and (max-width: 767px){
+    .interface {
+        background-color: burlywood;
+        display: block;
+    }
+        
+    .produto-box {
+        height: 50vh;
+        overflow-y: scroll;
+
+    }
+    .prod-bar {
+        width: 100vw;
+        text-align: left;
+        padding: 0 5px;
+    }
+    .menu-produto input {
+        width: 120px;
+    }
+    .pendencia-box, .cotacao-box {
+        height: 20vh;
+        margin: 10px auto;
+    }
+
+}
+
+
+
+
 
 @media screen and (min-width: 768px) and (max-width: 992px) {
     body {
-        width: 100%;
+        
+        width: 100vw;
     }
-    .prod-bar, .sidebar {
+    .interface{
+        
+        background-color: aqua;
+
+    }
+    
+    .produto-box {
+        overflow-y: scroll;
+        
+        
+    }
+    .prod-bar {
+        width: 100vw;
         text-align: center;
 
     }
-    input {
-        width: 200px;
-    }
-    button {
-        margin: 10px 20px;
-    }
-    #lista-busca {
-        margin: 10px -5px 10px 0 ;
-    }
 
+    .menu-produto {
+        text-align: left;
+        
+    }
+    .menu-produto #lista-busca, input {
+        margin-left: 5px;
+    }
+    .menu-produto input {
+        width: 150px;
+    }
+    .menu-produto > button {
+        margin: 10px 5px;
+    }
+    
+    .interface table {
+        margin: 10px 2px;
+    }
 
 }
 
 
-@media screen and (min-width: 992px) and (max-width: 1200px) {
+@media screen and (min-width: 993px) and (max-width: 1200px) {
     body {
         width: 100vw;
-    }
-
-    .prod-bar, .sidebar {
-        text-align: center
-
-    }
-    .interface > input {
-        width: 400px;
-    }
-    button {
-        margin: 10px 20px;
-    }
-    #lista-busca {
-        margin: 10px -5px 10px 0 ;
-    }
-    table {
-        width: 100%;
-    }
-    .pendencia-box {
-
-        visibility: visible;
-    }
-    /*
-    .pendencia-box > table {
-        width: 98%;
-    }
-    .cotacao-box > table {
-        width: 98%;
-    }
-    .pendencia-box {
-        display: inline-flex;
-        width: 50vw;
-        visibility: visible;
-    }
-    .cotacao-box {
-        display: inline-flex;
-        width: 50vw;
-    }*/
-}
-
-@media screen and (min-width: 1201px) {
-    body {
-        width: 100vw;
-    }
-    .interface /*equivale ao section.container*/{
-        height: 400px;
-
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: ;
-    }
-    .sub-int {
-        width: 20%;
-
-
-
-    }
-    .pendencia-box{
-
-    }
-    .cotacao-box{
-
-    }
-
-
-
-    div.cotacao-box {
-        display: block;
-
-        margin: 0 auto;
-
-    }
-
-    .prod-bar, .sidebar {
-        text-align: center;
-
-    }
-    input {
-        width: 200px;
-    }
-    button {
-        margin: 10px 20px;
-    }
-    #lista-busca {
-        margin: 10px -5px 10px 0 ;
-    }
-    div > table {
-        width: 100%;
-    }
-    .sub-int > table {
-        width: 98%;
     }
     .interface {
-        background-color: green;
+        background-color: blueviolet;
     }
+    .produto-box {
+        overflow-y: scroll;
+    }
+    .prod-bar {
+        width: 100%;
+        text-align: center;
+
+    }
+
+    .menu-produto {
+        text-align: center;
+        
+    }
+    .menu-produto #lista-busca, input {
+        margin-left: 5px;
+    }
+    .menu-produto input {
+        width: 200px;
+    }
+    .menu-produto > button {
+        margin: 10px 5px;
+    }
+    
+    .interface table {
+        margin: 10px 10px;
+    }
+    .produto-box table {
+        margin: 10px auto;
+    }
+    
 }
+

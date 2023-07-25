@@ -3,22 +3,22 @@ body, ul, li, form, table{
     margin: 0;
     padding: 0;
     list-style: none;
-    font-size: 20px;
+    font-size: 0.8em;
     font-family: Arial sans-serif;
 }
 /*esconde os scrolls*/
 body {
-
-    width: 100%;
-    height: 100%;
+    
+    width: 100vw;
+    height: 100vh;
     background-image: url("../imagens/aviao-hangar-m.jpg");
-    background-size: cover;
-    background-attachment: scroll;
+    background-size: cover ;
+    
 }
 /*area utilizavel*/
 section {
     background-color: white;
-    width: 1250px;
+    width: 800px;
     height: 80%;
     min-width: 600px;
     margin-left: auto; /*usado com o margin right, centraliza o elemento */
@@ -58,7 +58,7 @@ form label {
 }
 
 
-select {
+.l1 select {
     background-color: white;
     width: 258px;
     height: 30px;
@@ -67,6 +67,17 @@ select {
     border-radius: 0 4px 4px 0 ;
 
 }
+
+.l2 select {
+    background-color: white;
+    width: 220px;
+    height: 30px;
+    margin-left: -5px;
+    margin-right: 20px;
+    border-radius: 0 4px 4px 0 ;
+
+}
+
 input {
     width: 250px;
     height: 22px;
@@ -110,16 +121,17 @@ button {
 
 
 }
+/*
 #rodape-div {
     display: block;
-    width: 1310px;
+    width: 100vw;
     height: 30px;
     background-image: linear-gradient(45deg,#dcd9d9, #797676);
     margin: 360px 0 -250px -30px ;
     padding: 0;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
-}
+}*/
 
 footer {
     text-align: center;
@@ -129,3 +141,142 @@ footer {
 footer > p {
     color: white;
 }
+
+@media only screen and (max-width: 600px)/*celular*/{
+    body{
+        width: 100vw;
+    }
+    header{
+        width: auto;
+    }
+    section {
+        width: 50vw;
+        overflow-y: scroll;
+    }
+    
+    form {
+        
+        padding: 0;
+        
+    }
+
+    .l1, .l2 {
+        width: 100vw;
+        margin: 0;
+    }
+    .l1 label{
+        width: 140px;
+    }
+
+    .l2 label {
+        width: 140px;
+    }
+    .div-botao {
+        text-align: center;
+    }
+    .fotos-entrada {
+        width: 100vw;
+        margin: 50px auto;
+        
+    }
+
+
+
+}
+
+
+
+@media only screen and (min-width: 768px) /*tablet*/{
+    body{
+        width: 100vw;
+    }
+    header{
+        width: auto;
+    }
+    section {
+        width: 90vw;
+        overflow-y: scroll;
+        
+    }
+    
+    form {
+        margin: 10px;
+        padding: 0;
+        
+    }
+
+    .l1, .l2 {
+        width: 100vw;
+        margin: 0;
+    }
+    .l1 label{
+        width: 140px;
+    }
+
+    .l2 label {
+        width: 140px;
+    }
+    .div-botao {
+        text-align: center;
+    }
+    .fotos-entrada {
+        width: 100vw;
+        margin: 50px auto;
+        
+    }
+}
+
+@media only screen and (min-width: 992px) /*pc*/{
+    #interface {
+        width: 100vw;
+        padding: 0;
+    }
+    /*formulario*/
+    form label {
+        display: inline-block;
+        width: 110px;
+        height: 18px;
+        background-color: rgba(0,0,0,0.14) ;
+        padding: 5px;
+        box-sizing: content-box;
+        border-radius: 2px 0 0 2px;
+        text-align: center;
+        border: rgba(0,0,0,0.14) solid 1px;
+        font-size: 1rem;
+        margin-right: 0;
+    }
+    
+    
+    .l1 select {
+        background-color: white;
+        width: 258px;
+        height: 30px;
+        margin-left: -5px;
+        margin-right: 20px;
+        border-radius: 0 4px 4px 0 ;
+    
+    }
+    
+    .l2 select {
+        background-color: white;
+        width: 220px;
+        height: 30px;
+        margin-left: -5px;
+        margin-right: 20px;
+        border-radius: 0 4px 4px 0 ;
+    
+    }
+    
+    input {
+        width: 250px;
+        height: 22px;
+        margin-left: -5px;
+        margin-right: 20px;
+        border-radius: 0 2px 2px 0 ;
+        box-shadow: none;
+    
+    }
+     
+
+}
+
